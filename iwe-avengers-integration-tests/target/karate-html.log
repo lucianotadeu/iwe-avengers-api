@@ -1,25 +1,25 @@
-22:51:29.147 karate.env system property was: null 
-22:51:29.539 request:
+22:38:52.114 karate.env system property was: null 
+22:38:52.500 request:
 1 > GET https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: hmjd1x1add.execute-api.us-east-2.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:51:30.522 response time in milliseconds: 982
+22:38:53.977 response time in milliseconds: 1476
 1 < 200
 1 < Connection: keep-alive
-1 < Content-Length: 83
+1 < Content-Length: 0
 1 < Content-Type: application/json
-1 < Date: Wed, 08 Aug 2018 01:51:30 GMT
-1 < x-amz-apigw-id: LSDpYECtiYcF3jw=
-1 < x-amzn-RequestId: 91ffa523-9aad-11e8-b712-89ddfbed512f
-{"id": "asasa-asd-sassas-sad", 
-"name": "Iron Man",
-"secretIdentity": "Tony Stark"}
+1 < Date: Fri, 10 Aug 2018 01:38:53 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b6cecad-c675114abc762e11fbb4fedb;Sampled=0
+1 < x-amz-apigw-id: LYnrHGaSiYcF89g=
+1 < x-amzn-RequestId: 23b06c45-9c3e-11e8-8411-d9e021bde90e
 
-22:51:30.566 karate.env system property was: null 
-22:51:30.572 request:
+
+22:38:54.010 assertion failed: path: $, actual: '', expected: '{"id":"#string","name":"Iron Man","secretIdentity":"Tony Stark"}', reason: not equal
+22:38:54.024 karate.env system property was: null 
+22:38:54.031 request:
 1 > POST https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -29,114 +29,106 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":" Captain America","secretIdentity":"Steve Rogers"}
 
-22:51:31.124 response time in milliseconds: 551
+22:38:54.565 response time in milliseconds: 534
 1 < 201
 1 < Connection: keep-alive
-1 < Content-Length: 84
+1 < Content-Length: 96
 1 < Content-Type: application/json
-1 < Date: Wed, 08 Aug 2018 01:51:31 GMT
-1 < x-amz-apigw-id: LSDpeEBWCYcFzqw=
-1 < x-amzn-RequestId: 925ae463-9aad-11e8-83bc-7384be7bf8e0
+1 < Date: Fri, 10 Aug 2018 01:38:54 GMT
+1 < x-amz-apigw-id: LYnrQGJLCYcFc0g=
+1 < x-amzn-RequestId: 24418828-9c3e-11e8-a67f-31f041594342
 {
-  "id": "satatatata",
-  "name": "Iron Man",
-  "secretIdentity": "Tony Stark"
+  "id": "bsbsbsbsbsbsb",
+  "name": "Captain America",
+  "secretIdentity": "Steve Rogers"
 }
 
-22:51:31.140 karate.env system property was: null 
-22:51:31.143 request:
+22:38:54.579 karate.env system property was: null 
+22:38:54.581 request:
 1 > DELETE https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: hmjd1x1add.execute-api.us-east-2.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:51:31.666 response time in milliseconds: 523
-1 < 200
-1 < Connection: keep-alive
-1 < Content-Length: 0
-1 < Content-Type: application/json
-1 < Date: Wed, 08 Aug 2018 01:51:31 GMT
-1 < x-amz-apigw-id: LSDpjHajiYcFx5w=
-1 < x-amzn-RequestId: 92aeaa00-9aad-11e8-83db-75e0721c3982
-
-
-22:51:31.675 karate.env system property was: null 
-22:51:31.678 request:
-1 > PUT https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa
-1 > Accept-Encoding: gzip,deflate
-1 > Connection: Keep-Alive
-1 > Content-Length: 59
-1 > Content-Type: application/json; charset=UTF-8
-1 > Host: hmjd1x1add.execute-api.us-east-2.amazonaws.com
-1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
-{"name":" Captain America","secretIdentity":"Steve Rogers"}
-
-22:51:32.217 response time in milliseconds: 539
+22:38:55.114 response time in milliseconds: 533
 1 < 204
 1 < Connection: keep-alive
 1 < Content-Length: 0
 1 < Content-Type: application/json
-1 < Date: Wed, 08 Aug 2018 01:51:32 GMT
-1 < x-amz-apigw-id: LSDppEo9iYcFrMQ=
-1 < x-amzn-RequestId: 93030be1-9aad-11e8-a2bb-05cb80e03cf8
+1 < Date: Fri, 10 Aug 2018 01:38:55 GMT
+1 < x-amz-apigw-id: LYnrWEItCYcFpzA=
+1 < x-amzn-RequestId: 24948a46-9c3e-11e8-8cbb-0d53c77b4b06
 
-1 < x-amzn-RequestId: 512ccbcb-9aad-11e8-b712-89ddfbed512f
-{"message":"Missing Authentication Token"}
+22:38:55.124 karate.env system property was: null 
+22:38:55.127 request:
+1 > PUT https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 43
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: hmjd1x1add.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"name":"Lucas","secretIdentity":"Luciano"}
 
-22:49:41.756 status code was: 403, expected: 204, response time: 536, url: https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa, response: {"message":"Missing Authentication Token"}
-  .error {
-      text-align: center;
-    }
-    h1.error-code {
-      font-size: 15em;
-      color: #686868;
-    }
-    [data-dropdown="aws-nav-dropdown-lang"] {
-      display: none;
-    }
-  </style>
-  <script>
-    var AWS = {
-      PageSettings: {
-        supportedLanguages: ['en'],
-        defaultLanguage: 'en',
-        logDataSet: 'LIVE:PROD',
-        logInstance: 'PUB',
-        libraCSSPath: '//a0.awsstatic.com/libra-css/css/1.0.167'
-      }
-    };
+22:38:55.664 response time in milliseconds: 537
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Length: 78
+1 < Content-Type: application/json
+1 < Date: Fri, 10 Aug 2018 01:38:55 GMT
+1 < x-amz-apigw-id: LYnrbH7HiYcFgbQ=
+1 < x-amzn-RequestId: 24e89e15-9c3e-11e8-b49d-9333d9576234
+{
+  "id": "satatatata",
+  "name": "Lucas",
+  "secretIdentity": "Luciano"
+}
 
-    var require = {
-      baseUrl: "//a0.awsstatic.com/chrome/js/1.0.401/",
-      paths: {
-        "jquery": "jquery-amd"
-      },
-      deps: ["scripts"],
-      shim: {
-        "scripts": ["jquery"],
-        "forms": ["jquery"],
-        "pricing-table": ["jquery", "scripts"],
-        "plugins/bootstrap.button": ["jquery"],
-        "plugins/bootstrap.collapse": ["jquery"],
-        "plugins/bootstrap.dropdown": ["jquery"],
-        "plugins/bootstrap.popover": ["jquery"],
-        "plugins/bootstrap.tab": ["jquery"],
-        "plugins/bootstrap.tooltip": ["jquery"],
-        "plugins/free-tier": ["jquery", "scripts"],
-        "plugins/jquery.caroufredsel": ["jquery"],
-        "plugins/jquery.fancybox": ["jquery"],
-        "plugins/jwplayer.html5": ["jquery"],
-        "plugins/jwplayer": ["jquery"],
-        "plugins/pbSize": ["jquery"],
-        "plugins/pushstate": ["jquery", "scripts"],
-        "plugins/search-controller": ["jquery"],
-        "plugins/jquery.touchSwipe": ["jquery"]
-      },
-      waitSeconds: 15
-    };
-  </script>
-  <script src="//a0.awsstatic.com/chrome/js/1.0.401/head.2.0.js"></script>
+22:38:55.675 karate.env system property was: null 
+22:38:55.677 request:
+1 > POST https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 33
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: hmjd1x1add.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"secretIdentity":"Steve Rogers"}
+
+22:38:56.235 response time in milliseconds: 558
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 35
+1 < Content-Type: application/json
+1 < Date: Fri, 10 Aug 2018 01:38:56 GMT
+1 < x-amz-apigw-id: LYnrhGWiiYcF2LQ=
+1 < x-amzn-RequestId: 253e5ef3-9c3e-11e8-a3ca-a19b31cec6bc
+{"message": "Invalid request body"}
+
+22:38:56.244 karate.env system property was: null 
+22:38:56.247 request:
+1 > PUT https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 33
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: hmjd1x1add.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"secretIdentity":"Steve Rogers"}
+
+22:38:56.800 response time in milliseconds: 553
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 35
+1 < Content-Type: application/json
+1 < Date: Fri, 10 Aug 2018 01:38:56 GMT
+1 < x-amz-apigw-id: LYnrnEcyCYcFsFQ=
+1 < x-amzn-RequestId: 25949571-9c3e-11e8-94aa-33abbae4de1a
+{"message": "Invalid request body"}
+
+dd.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa, response: {"id":"satatatata","name":"Lucas","secretIdentity":"Luciano"}
+head.2.0.js"></script>
   <script src="//a0.awsstatic.com/s_code/js/1.0/awshome_s_code.js"></script>
   <script src="//a0.awsstatic.com/target/1.0.96/aws-target-mediator.js"></script>
 </head>

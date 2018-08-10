@@ -17,11 +17,34 @@ Given path 'avengers'
 And request {name:' Captain America', secretIdentity: 'Steve Rogers'}
 When method post
 Then status 201
-And match response == {name: '', secretIdentity: ''}
+And match response == {id: '#string', name: 'Captain America', secretIdentity: 'Steve Rogers'}
 
-Scenario: Delete a new Avenger
+
+Scenario: Delete Avenger
+
+Given path 'avengers' ,'sdsa-sasa-asas-sasa'
+When method delete
+Then status 204
+
+Scenario: Update Avenger
+
+Given path 'avengers' ,'sdsa-sasa-asas-sasa'
+And request {name:'Lucas', secretIdentity: 'Luciano'}
+When method put
+Then status 200
+And match response == {id: '#string', name: 'Lucas', secretIdentity: 'Luciano'}
+
+Scenario: Registry Avenger whit Invalid Playload
 
 Given path 'avengers' 
-And request {name:' Captain America', secretIdentity: 'Steve Rogers'}
-When method delete
-Then status 201
+And request {secretIdentity: 'Steve Rogers'}
+When method post
+Then status 400
+
+Scenario: Updates Avenger whit Invalid
+
+Given path 'avengers' ,'sdsa-sasa-asas-sasa'
+And request {secretIdentity: 'Steve Rogers'}
+When method put
+Then status 400
+
