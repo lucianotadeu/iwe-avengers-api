@@ -31,12 +31,10 @@ Given path 'avengers' ,'sdsa-sasa-asas-sasa'
 When method delete
 Then status 204
 
-
-
 Scenario: Update Avenger
 
-Given path 'avengers' ,'sdsa-sasa-asas-sasa'
-And request {name:'Lucas', secretIdentity: 'Luciano'}
+Given path 'avengers' ,'aaaa-aaaa-aaaa-aaaa'
+And request {name:'Hulk', secretIdentity: 'Bruce Banner'}
 When method put
 Then status 200
 And match response == {id: '#string', name: 'Lucas', secretIdentity: 'Luciano'}

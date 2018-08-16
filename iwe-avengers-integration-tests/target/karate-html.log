@@ -1,92 +1,106 @@
-22:38:52.114 karate.env system property was: null 
-22:38:52.500 request:
+20:06:33.314 karate.env system property was: null 
+20:06:33.768 request:
 1 > GET https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: hmjd1x1add.execute-api.us-east-2.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:38:53.977 response time in milliseconds: 1476
+20:06:34.751 response time in milliseconds: 983
 1 < 200
 1 < Connection: keep-alive
-1 < Content-Length: 0
+1 < Content-Length: 76
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:38:53 GMT
-1 < X-Amzn-Trace-Id: Root=1-5b6cecad-c675114abc762e11fbb4fedb;Sampled=0
-1 < x-amz-apigw-id: LYnrHGaSiYcF89g=
-1 < x-amzn-RequestId: 23b06c45-9c3e-11e8-8411-d9e021bde90e
+1 < Date: Thu, 16 Aug 2018 23:06:34 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b76037a-ba66a715698e1cec0a953c4f;Sampled=0
+1 < x-amz-apigw-id: LvV7KE1pCYcFW9w=
+1 < x-amzn-RequestId: 055d8558-a1a9-11e8-b4da-6f4ec9380244
+{"id":"sdsa-sasa-asas-sasa","name":"Iron Man","secretIdentity":"Tony Stark"}
 
+20:06:34.814 karate.env system property was: null 
+20:06:34.814 request:
+1 > GET https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers/invalid
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: hmjd1x1add.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:38:54.010 assertion failed: path: $, actual: '', expected: '{"id":"#string","name":"Iron Man","secretIdentity":"Tony Stark"}', reason: not equal
-22:38:54.024 karate.env system property was: null 
-22:38:54.031 request:
+20:06:35.345 response time in milliseconds: 531
+1 < 404
+1 < Connection: keep-alive
+1 < Content-Length: 318
+1 < Content-Type: application/json
+1 < Date: Thu, 16 Aug 2018 23:06:35 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b76037b-9d1b9d9d8633933b92800196;Sampled=0
+1 < x-amz-apigw-id: LvV7QHzqCYcFa_Q=
+1 < x-amzn-RequestId: 05be912f-a1a9-11e8-93f0-cbba733397fd
+{"errorMessage":"[NotFound] - Avenger id:invalidnota found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:23)","com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:1)"]}
+
+20:06:35.361 karate.env system property was: null 
+20:06:35.361 request:
 1 > POST https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
-1 > Content-Length: 59
+1 > Content-Length: 58
 1 > Content-Type: application/json; charset=UTF-8
 1 > Host: hmjd1x1add.execute-api.us-east-2.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
-{"name":" Captain America","secretIdentity":"Steve Rogers"}
+{"name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:38:54.565 response time in milliseconds: 534
+20:06:35.923 response time in milliseconds: 562
 1 < 201
 1 < Connection: keep-alive
-1 < Content-Length: 96
+1 < Content-Length: 67
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:38:54 GMT
-1 < x-amz-apigw-id: LYnrQGJLCYcFc0g=
-1 < x-amzn-RequestId: 24418828-9c3e-11e8-a67f-31f041594342
-{
-  "id": "bsbsbsbsbsbsb",
-  "name": "Captain America",
-  "secretIdentity": "Steve Rogers"
-}
+1 < Date: Thu, 16 Aug 2018 23:06:35 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b76037b-bd0f98449be1c1d89462886c;Sampled=0
+1 < x-amz-apigw-id: LvV7WF1FiYcFkIw=
+1 < x-amzn-RequestId: 06125613-a1a9-11e8-a1ee-6533af2d20ef
+{"id":"2","name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:38:54.579 karate.env system property was: null 
-22:38:54.581 request:
+20:06:35.923 karate.env system property was: null 
+20:06:35.923 request:
 1 > DELETE https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: hmjd1x1add.execute-api.us-east-2.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:38:55.114 response time in milliseconds: 533
+20:06:36.472 response time in milliseconds: 549
 1 < 204
 1 < Connection: keep-alive
 1 < Content-Length: 0
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:38:55 GMT
-1 < x-amz-apigw-id: LYnrWEItCYcFpzA=
-1 < x-amzn-RequestId: 24948a46-9c3e-11e8-8cbb-0d53c77b4b06
+1 < Date: Thu, 16 Aug 2018 23:06:36 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b76037c-f8cf61a3cd4b83be8e17830a;Sampled=0
+1 < x-amz-apigw-id: LvV7bFYjiYcF0bg=
+1 < x-amzn-RequestId: 066530d0-a1a9-11e8-b756-679c36b1e55a
 
-22:38:55.124 karate.env system property was: null 
-22:38:55.127 request:
-1 > PUT https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa
+20:06:36.487 karate.env system property was: null 
+20:06:36.487 request:
+1 > PUT https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers/aaaa-aaaa-aaaa-aaaa
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
-1 > Content-Length: 43
+1 > Content-Length: 47
 1 > Content-Type: application/json; charset=UTF-8
 1 > Host: hmjd1x1add.execute-api.us-east-2.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
-{"name":"Lucas","secretIdentity":"Luciano"}
+{"name":"Hulk","secretIdentity":"Bruce Banner"}
 
-22:38:55.664 response time in milliseconds: 537
+20:06:37.066 response time in milliseconds: 579
 1 < 200
 1 < Connection: keep-alive
-1 < Content-Length: 78
+1 < Content-Length: 55
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:38:55 GMT
-1 < x-amz-apigw-id: LYnrbH7HiYcFgbQ=
-1 < x-amzn-RequestId: 24e89e15-9c3e-11e8-b49d-9333d9576234
-{
-  "id": "satatatata",
-  "name": "Lucas",
-  "secretIdentity": "Luciano"
-}
+1 < Date: Thu, 16 Aug 2018 23:06:36 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b76037c-6194814477470dd8387bd378;Sampled=0
+1 < x-amz-apigw-id: LvV7hGDSCYcF89g=
+1 < x-amzn-RequestId: 06c13377-a1a9-11e8-8b4a-37d0d1181bd6
+{"statusCode":200,"headers":{},"isBase64Encoded":false}
 
-22:38:55.675 karate.env system property was: null 
-22:38:55.677 request:
+20:06:37.066 assertion failed: path: $.id, actual: '(not present)', expected: '#string', reason: actual value does not contain expected
+20:06:37.067 karate.env system property was: null 
+20:06:37.067 request:
 1 > POST https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -96,18 +110,18 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"secretIdentity":"Steve Rogers"}
 
-22:38:56.235 response time in milliseconds: 558
+20:06:37.599 response time in milliseconds: 532
 1 < 400
 1 < Connection: keep-alive
 1 < Content-Length: 35
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:38:56 GMT
-1 < x-amz-apigw-id: LYnrhGWiiYcF2LQ=
-1 < x-amzn-RequestId: 253e5ef3-9c3e-11e8-a3ca-a19b31cec6bc
+1 < Date: Thu, 16 Aug 2018 23:06:37 GMT
+1 < x-amz-apigw-id: LvV7nGwaiYcFdgA=
+1 < x-amzn-RequestId: 0716f4fc-a1a9-11e8-af6d-97d581d8add7
 {"message": "Invalid request body"}
 
-22:38:56.244 karate.env system property was: null 
-22:38:56.247 request:
+20:06:37.614 karate.env system property was: null 
+20:06:37.614 request:
 1 > PUT https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -117,86 +131,82 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"secretIdentity":"Steve Rogers"}
 
-22:38:56.800 response time in milliseconds: 553
+20:06:38.114 response time in milliseconds: 500
 1 < 400
 1 < Connection: keep-alive
 1 < Content-Length: 35
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:38:56 GMT
-1 < x-amz-apigw-id: LYnrnEcyCYcFsFQ=
-1 < x-amzn-RequestId: 25949571-9c3e-11e8-94aa-33abbae4de1a
+1 < Date: Thu, 16 Aug 2018 23:06:38 GMT
+1 < x-amz-apigw-id: LvV7sEpICYcFqag=
+1 < x-amzn-RequestId: 07669b70-a1a9-11e8-82b9-6d18ee7949ab
 {"message": "Invalid request body"}
 
-dd.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa, response: {"id":"satatatata","name":"Lucas","secretIdentity":"Luciano"}
-head.2.0.js"></script>
-  <script src="//a0.awsstatic.com/s_code/js/1.0/awshome_s_code.js"></script>
-  <script src="//a0.awsstatic.com/target/1.0.96/aws-target-mediator.js"></script>
-</head>
-<body>
+nt-Type: application/json
+1 < Date: Thu, 16 Aug 2018 22:12:02 GMT
+1 < x-amz-apigw-id: LvN70EUbiYcFjqw=
+1 < x-amzn-RequestId: 66b8e5ff-a1a1-11e8-9778-45ba25a7c426
+{"message": "Invalid request body"}
 
-  <header id="aws-page-header" class="aws" role="banner"> 
- <div id="aws-nav" class="aws-nav" role="navigation"> 
-  <div class="aws-nav-header"> 
-   <div class="aws-nav-header-left"> 
-    <div id="aws-nav-flyout-trigger" class="aws-nav-flyout-trigger" data-flyout="aws-nav-flyout-1-root" tabindex="1"> 
-     <i class="aws-nav-icon-reorder"></i>Menu 
-    </div> 
-    <div class="aws-bg-logo lb-bg-logo aws-amazon_web_services_smile-header-desktop-en"> 
-     <a href="https://aws.amazon.com/?nc2=h_lg"><span>Click here to return to Amazon Web Services homepage</span></a> 
-    </div> 
-    <div id="aws-nav-quicklinks" class="aws-nav-quicklinks"> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/contact-us/?nc2=h_ql_cu" style="color: #e9903a">Contact Sales</a> 
-     </div> 
-     <div class="aws-nav-quicklink aws-nav-popover-trigger" data-dropdown="aws-nav-dropdown-products"> 
-      <a href="https://aws.amazon.com/products/?nc2=h_ql_p">Products<i class="icon-caret-down"></i></a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/solutions/?nc2=h_ql_s">Solutions</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/pricing/?nc2=h_ql_pr">Pricing</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/getting-started/?nc2=h_ql_gs">Getting Started</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/documentation/?nc2=h_ql_d">Documentation</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/marketplace/ref=mkt_ste_ql_4?nc2=h_ql_s">AWS Marketplace</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/premiumsupport/?nc2=h_ql_su">Support</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/solutions/case-studies/?nc2=h_ql_c">Customers</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/partners/?nc2=h_ql_p">Partners</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/enterprise/?nc2=h_ql_e">Enterprises</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/startups/?nc2=h_ql_st">Startups</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/government-education/?nc2=h_ql_ps">Public Sector</a> 
-     </div> 
-     <div class="aws-nav-quicklink"> 
-      <a href="https://aws.amazon.com/careers/?nc2=h_ql_ca">Careers</a> 
-     </div> 
-     <div id="aws-nav-quicklinks-overflow" class="aws-nav-quicklinks-overflow"> 
-      <div class="aws-nav-popover-trigger" data-dropdown="aws-nav-dropdown-quicklinks"> 
-       <span>More</span> 
-       <i class="icon-caret-down"></i> 
-      </div> 
-     </div> 
-    </div> 
-   </div> 
-   <div id="aws-nav-header-right" class="aws-nav-header-right"> 
-    <div class="aws-nav-cta-button-outer"> 
+igw-id: LpJRhG6LiYcFxxg=
+1 < x-amzn-RequestId: bed6d478-a02e-11e8-aae0-bdcbaf97659e
+{"message": "Invalid request body"}
+
+}
+
+
+essage": "Invalid request body"}
+
+22:40:49.078 karate.env system property was: null 
+22:40:49.081 request:
+1 > PUT https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 33
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: hmjd1x1add.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"secretIdentity":"Steve Rogers"}
+
+22:40:49.600 response time in milliseconds: 519
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 35
+1 < Content-Type: application/json
+1 < Date: Wed, 15 Aug 2018 01:40:49 GMT
+1 < x-amz-apigw-id: LpGpOH66CYcFb_g=
+1 < x-amzn-RequestId: 3cdb2500-a02c-11e8-994e-ad956bd849e5
+{"message": "Invalid request body"}
+
+
+1 < Content-Length: 35
+1 < Content-Type: application/json
+1 < Date: Wed, 15 Aug 2018 01:39:18 GMT
+1 < x-amz-apigw-id: LpGbFEEXCYcFsFQ=
+1 < x-amzn-RequestId: 06e0062b-a02c-11e8-9103-6b0fe1053725
+{"message": "Invalid request body"}
+
+22:39:19.040 karate.env system property was: null 
+22:39:19.042 request:
+1 > PUT https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 33
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: hmjd1x1add.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"secretIdentity":"Steve Rogers"}
+
+22:39:19.537 response time in milliseconds: 494
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 35
+1 < Content-Type: application/json
+1 < Date: Wed, 15 Aug 2018 01:39:19 GMT
+1 < x-amz-apigw-id: LpGbKH7niYcF3Ng=
+1 < x-amzn-RequestId: 072ced7b-a02c-11e8-b619-37e2f23ab664
+{"message": "Invalid request body"}
+
+"> 
      <div class="lb-mbox js-mbox" data-mbox="en_h_nav_cta"> 
       <a id="aws-nav-cta-button" class="aws-nav-button" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct" style="min-width:105px;">Sign Up</a> 
      </div> 

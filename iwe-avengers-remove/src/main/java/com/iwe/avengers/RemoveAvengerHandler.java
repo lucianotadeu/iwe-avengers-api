@@ -14,22 +14,23 @@ public class RemoveAvengerHandler implements RequestHandler<Avenger, HandlerResp
 	@Override
 	public HandlerResponse handleRequest(final Avenger avenger, final Context context) {
 
-		context.getLogger().log(" [#]Initiante  registry");
 		final String id = avenger.getId();
-		context.getLogger().log("[#] - Searching Avenger with id:" + id);
-		
-		final Avenger retrivedAvanger = dao.delete(id);
-		
-		if(retrivedAvanger == null) {
-			throw new AvengerNotFoundException("[NotFound] - Avenger id:" + id + "nota found");
-			
+
+		context.getLogger().log("[#] - Searching Avenger with id: " + id);
+
+		final Avenger retrivedAvenger = dao.find(id);
+
+		if (retrivedAvenger == null) {
+			throw new AvengerNotFoundException("[NotFound] - Avenger id: " + id + " not found");
 		}
-		
-		final HandlerResponse response =  HandlerResponse.builder()
-				.setStatusCode(204)
-				.setObjectBody(avenger)
-				.build();
-		context.getLogger().log("[#] - Avenger delete  sucessfuly");
+
+		context.getLogger().log("[#] - Avenger found! Removing...");
+
+		dao.remove(id);
+
+		context.getLogger().log("[#] - Successfully removed Avenger");
+
+		final HandlerResponse response = HandlerResponse.builder().build();
 
 		return response;
 	}
