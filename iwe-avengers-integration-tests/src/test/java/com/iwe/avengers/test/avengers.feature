@@ -3,13 +3,6 @@ Feature: Perform integrated tests on the Avengers registration API
 Background:
 * url 'https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev'
 
-Scenario: Get Avenger by Id
-
-Given path 'avengers', 'sdsa-sasa-asas-sasa'
-When method get
-Then status 200
-And match response == {id: '#string', name: 'Iron Man', secretIdentity: 'Tony Stark'}
-
 Scenario:  Avenger Not Found
 
 Given path 'avengers', 'invalid'
@@ -24,6 +17,13 @@ When method post
 Then status 201
 And match response == {id: '#string', name: 'Captain America', secretIdentity: 'Steve Rogers'}
 
+* def savedAvenger = response 
+
+#Get Avenger by id
+Given path 'avengers', savedAvenger.id
+When method get
+Then status 200
+And match $ == savedAvenger
 
 Scenario: Delete Avenger
 
@@ -37,7 +37,7 @@ Given path 'avengers' ,'aaaa-aaaa-aaaa-aaaa'
 And request {name:'Hulk', secretIdentity: 'Bruce Banner'}
 When method put
 Then status 200
-And match response == {id: '#string', name: 'Lucas', secretIdentity: 'Luciano'}
+And match response == {id: '#string', name: 'Hulk', secretIdentity: 'Bruce Banner'}
 
 Scenario: Registry Avenger whit Invalid Playload
 
@@ -48,8 +48,8 @@ Then status 400
 
 Scenario: Updates Avenger whit Invalid
 
-Given path 'avengers' ,'sdsa-sasa-asas-sasa'
-And request {secretIdentity: 'Steve Rogers'}
+Given path 'avengers' ,'aaaa-aaaa-aaaa-aaaa'
+And request {secretIdentity: 'Bruce Banner'}
 When method put
 Then status 400
 

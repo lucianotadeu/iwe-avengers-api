@@ -17,7 +17,7 @@ public class CreateAvengersHandler implements RequestHandler<Avenger, HandlerRes
 		
 		context.getLogger().log(" [#]Initiante  registry");
 		
-		final Avenger avenger = dao.create(newAvenger);
+		final Avenger avenger = dao.save(newAvenger);
 		
 		final HandlerResponse response =  HandlerResponse.builder()
 				.setStatusCode(200)
