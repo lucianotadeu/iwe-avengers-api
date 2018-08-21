@@ -25,19 +25,54 @@ When method get
 Then status 200
 And match $ == savedAvenger
 
-Scenario: Delete Avenger
+Scenario: Delete  the Avenger by id
 
-Given path 'avengers' ,'sdsa-sasa-asas-sasa'
+#Create a new Avenger
+Given path 'avengers' 
+And request {name:'Hulk', secretIdentity: 'Bruce Banner'}
+When method post
+Then status 201
+
+* def avengerToDelete = response 
+
+#Delete the Avenger
+Given path 'avengers' , avengerToDelete.id
 When method delete
 Then status 204
 
-Scenario: Update Avenger
+#Search deleted Avanger
+Given path 'avengers' , avengerToDelete.id
+When method get
+Then status 404
 
-Given path 'avengers' ,'aaaa-aaaa-aaaa-aaaa'
-And request {name:'Hulk', secretIdentity: 'Bruce Banner'}
+Scenario: Attempt to delete a non-existent Avenger
+Given path 'avengers', 'sss-ddd-fff-eee'
+When method delete
+Then status 404
+
+
+Scenario: Update the Avenger data
+#Create a new Avenger
+Given path 'avengers'
+And request {name:'Captain', secretIdentity: 'Steve'}
+When method post
+Then status 201
+
+* def avengerToUpdate = response 
+
+Given path 'avengers', avengerToUpdate.id
+And request {name:'Captain America', secretIdentity: 'Steve Rogers'}
 When method put
 Then status 200
-And match response == {id: '#string', name: 'Hulk', secretIdentity: 'Bruce Banner'}
+And match $.id == avengerToUpdate.id
+And match $.name == 'Captain America'
+And match $.secretIdentity == 'Steve Rogers'
+
+Scenario: Attempt to upgrade a non-existent Avenger
+Given path 'avengers', 'sss-ddd-fff-eee'
+And request {name:'Captain America', secretIdentity: 'Steve Rogers'}
+When method put
+Then status 404
 
 Scenario: Registry Avenger whit Invalid Playload
 
