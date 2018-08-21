@@ -3,6 +3,16 @@ Feature: Perform integrated tests on the Avengers registration API
 Background:
 * url 'https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev'
 
+ * def getToken =
+"""
+function() {
+ var TokenGenerator = Java.type('com.iwe.avengers.test.authorization.TokenGenerator');
+ var sg = new TokenGenerator();
+ return sg.getToken();
+}
+"""
+* def token = call getToken
+
 Scenario:  Should return Unauthorized access
 
 Given path 'avengers', 'invalid'
