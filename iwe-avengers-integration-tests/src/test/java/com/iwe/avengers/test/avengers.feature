@@ -3,6 +3,13 @@ Feature: Perform integrated tests on the Avengers registration API
 Background:
 * url 'https://hmjd1x1add.execute-api.us-east-2.amazonaws.com/dev'
 
+Scenario:  Should return Unauthorized access
+
+Given path 'avengers', 'invalid'
+When method get
+Then status 401
+
+
 Scenario:  Avenger Not Found
 
 Given path 'avengers', 'invalid'
