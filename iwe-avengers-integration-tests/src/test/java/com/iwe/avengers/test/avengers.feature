@@ -23,6 +23,7 @@ Then status 401
 Scenario:  Avenger Not Found
 
 Given path 'avengers', 'invalid'
+And header Authorization = 'Bearer ' + token
 When method get
 Then status 404
 
